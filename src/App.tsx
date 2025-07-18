@@ -6,7 +6,7 @@ import ClientTable from "./components/ClientTable";
 import PaginationControls from "./components/PaginationControls";
 import type { Client } from "./types/Client";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 5;
 
 const App: React.FC = () => {
   const { clients } = useClients();
@@ -41,9 +41,17 @@ const App: React.FC = () => {
   return (
     <Box className="bg-gray-50 min-h-screen py-10">
       <Container maxWidth="lg">
-        <Typography variant="h4" className="text-center text-blue-800 font-bold mb-6">
-          Client Table
-        </Typography>
+       <Typography
+    variant="h3"
+    sx={{
+      fontWeight: 700,
+      background: "linear-gradient(to right, #2563eb, #9333ea)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    Client Table
+  </Typography>
 
         <Filters
           searchName={searchName}
